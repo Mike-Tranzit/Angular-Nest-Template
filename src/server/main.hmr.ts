@@ -1,5 +1,5 @@
 import { NestFactory, FastifyAdapter } from "@nestjs/core";
-import { AppModule } from "./src/app.module";
+import { AppModule } from "./modules/app.module";
 import * as path from "path";
 
 declare const module: any;

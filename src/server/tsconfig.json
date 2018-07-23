@@ -6,6 +6,6 @@
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "outDir": "../../dist",
-    "baseUrl": "./src"
+    "baseUrl": "./modules"
   }
 }
