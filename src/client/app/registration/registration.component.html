@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Форма регистрации</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-group">
+      <label for="name">Имя:</label>
+      <input type="text" class="form-control" formControlName="name" id="name" placeholder="Введите имя">
+      <div *ngIf="submitted && f.name.errors">
+        <div *ngIf="f.name.errors.required">Имя обязательно</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" formControlName="email" placeholder="Введите email">
+      <div *ngIf="submitted && f.email.errors">
+        <div *ngIf="f.email.errors.required">Email обязателен</div>
+        <div *ngIf="f.email.errors.email">Не валидный Email</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Пароль:</label>
+      <input type="password" class="form-control" id="pwd" formControlName="password" placeholder="Введите пароль">
+      <div *ngIf="submitted && f.password.errors">
+        <div *ngIf="f.password.errors.required">Пароль обязателен</div>
+        <div *ngIf="f.password.errors.minlength">Длина 6 символов</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary">Регистрация</button>
+    </div>
+  </form>
+</div>
