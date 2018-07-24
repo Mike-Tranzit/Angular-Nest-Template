@@ -1,5 +1,5 @@
 import { NestFactory, FastifyAdapter } from "@nestjs/core";
-import { AppModule } from "./modules/app.module";
+import { AppModule } from "./app.module";
 import * as path from "path";
 
 async function bootstrap() {
