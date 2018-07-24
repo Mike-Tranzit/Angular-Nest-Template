@@ -2,10 +2,10 @@ import { Module } from '@nestjs/common';
 import { storageProvider } from './database.providers';
 @Module({
     providers: [
-        ...storageProvider
+        storageProvider
     ],
     exports: [
-        ...storageProvider,
+       storageProvider
     ]
 })
 export class DatabaseModule {}

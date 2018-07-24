@@ -20,7 +20,7 @@ import {Registration} from '../../models/index';
 })
 export class RegistarationState {
 
-    @Selector() static emailState(state:StateContext<{ [key: string]: Registration }>){
+    @Selector() static emailState(state: {[key: string]: Registration}){
         return state.registerForm.email;
     }
 
