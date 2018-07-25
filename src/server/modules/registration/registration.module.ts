@@ -1,4 +1,7 @@
 import { Module } from '@nestjs/common';
+import { RegistrationService } from './registration.service';
 
-@Module({})
+@Module({
+  providers: [RegistrationService]
+})
 export class RegistrationModule {}
