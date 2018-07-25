@@ -12,7 +12,7 @@ export const storageProvider = {
         password: config.MYSQL_PASSWORD,
         database: config.MYSQL_DATABASE,
         synchronize: true,
-        logging: false,
+        logging: true,
         entities: [
             __dirname + '/../**/*.entity{.ts,.js}',
         ],

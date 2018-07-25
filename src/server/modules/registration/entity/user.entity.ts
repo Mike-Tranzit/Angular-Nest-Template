@@ -8,7 +8,7 @@ export class UserEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({default: ''})
+  @Column()
   name: string;
 
   @Column()
@@ -22,4 +22,5 @@ export class UserEntity {
   hashPassword() {
     this.password = crypto.createHmac('sha256', this.password).digest('hex');
   }
+
 }

@@ -1,3 +1,4 @@
+/* ------DatabaseModule------ */
 export const DB_CONNECTION_TOKEN = 'DbConnectionToken';
 
 export const DB_CONFIG = {
@@ -7,3 +8,4 @@ export const DB_CONFIG = {
     MYSQL_PASSWORD : '',
     MYSQL_DATABASE : 'nest_template'
 }
+/* ------------------------- */

@@ -4,7 +4,8 @@ import * as path from "path";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, new FastifyAdapter());
-  app.setGlobalPrefix('api');
+  app.enableCors();
+  // app.setGlobalPrefix('api');
  /* app.useStaticAssets({
     root: path.resolve(__dirname + "../../../dist/public")
   });*/

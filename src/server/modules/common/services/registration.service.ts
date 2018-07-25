@@ -1,4 +1,4 @@
-import {HttpException, HttpStatus, Injectable, Inject} from '@nestjs/common';
+import {HttpException, HttpStatus, Injectable} from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
 import {Repository, getRepository} from 'typeorm';
 import {UserEntity} from '../../registration/entity/user.entity';
@@ -8,7 +8,8 @@ import {validate} from 'class-validator';
 
 @Injectable()
 export class RegistrationService {
-    constructor(@Inject('UserRepositoryToken')
+    // 'UserRepositoryToken'
+    constructor(@InjectRepository(UserEntity)
                 private readonly userRepository: Repository<UserEntity>) {
     }
 
@@ -21,8 +22,8 @@ export class RegistrationService {
             .orWhere('users.email = :email', {email});
         const user = await cn.getOne();
 
-        if(user){
-            const  errors = {name: 'Username is already exist'};
+        if (user) {
+            const errors = {name: 'Username is already exist'};
             throw new HttpException({message: 'Dublicate username', errors}, HttpStatus.BAD_REQUEST);
         }
 
@@ -33,11 +34,11 @@ export class RegistrationService {
 
         const error = await validate(newUser);
 
-        if(error.length > 0){
-            const  _errors = {name: 'Username is not valid'};
+        if (error.length > 0) {
+            const _errors = {name: 'Username is not valid'};
             throw new HttpException({message: 'Input data validation failed', _errors}, HttpStatus.BAD_REQUEST);
         } else {
-            const savedUser = await this.userRepository.create(newUser);
+            const savedUser = await this.userRepository.save(newUser);
             return this.buildUser(savedUser);
         }
     }
@@ -49,5 +50,4 @@ export class RegistrationService {
         };
         return {user: userSave};
     }
-
 }

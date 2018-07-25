@@ -2,7 +2,7 @@ import { Get, Post, Body, Put, Delete, Param, Controller, ValidationPipe, UsePip
 import {RegistrationService} from '../../modules/common/services/index';
 import {CreateUserDto} from './dto';
 
-@Controller()
+@Controller('/')
 export class RegistrationController {
 
   constructor(private readonly registrationService: RegistrationService) {}
