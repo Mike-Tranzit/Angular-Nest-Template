@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import { Module } from '@nestjs/common';
+import { RegistrationService } from './registration.service';
+
+@Module({
+  providers: [RegistrationService]
+})
+export class RegistrationModule {}
+=======
 import {Module} from '@nestjs/common';
 import {RegistrationController} from  './registration.controller';
 import { registrationProviders } from './registration.providers';
@@ -12,3 +21,4 @@ import {DatabaseModule} from '../../modules/database/database.module';
 })
 export class RegistrationModule {
 }
+>>>>>>> c58366939a8249174e11a157cba3a83c0f50c5da

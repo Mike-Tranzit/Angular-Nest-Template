@@ -23,7 +23,7 @@ export class CommonService {
     registration(body: Registration): Observable<Registration | any> {
         return this
             .http
-            .post<Registration>(`${this.url}/`, body, httpOptions).pipe(
+            .post<Registration>(`${this.url}/api/registration`, body, httpOptions).pipe(
                 catchError(err => of(err))
             );
     }
