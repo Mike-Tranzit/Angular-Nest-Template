@@ -36,7 +36,7 @@ export class RegistrationService {
 
         if (error.length > 0) {
             const _errors = {name: 'Username is not valid'};
-            throw new HttpException({message: 'Input data validation failed', _errors}, HttpStatus.BAD_REQUEST);
+            throw new HttpException({message: 'Input data validation  failed', _errors}, HttpStatus.BAD_REQUEST);
         } else {
             const savedUser = await this.userRepository.save(newUser);
             return this.buildUser(savedUser);
