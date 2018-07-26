@@ -11,7 +11,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
     imports: [RegistrationModule, RouterModule.forRoutes(routes), TypeOrmModule.forRoot()],
-    controllers: []
+    controllers: [],
+    providers: []
 })
 export class AppModule {
     constructor(private readonly connection: Connection) {
