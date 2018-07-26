@@ -8,3 +8,4 @@ export const services = [
 ];
 
 export * from './registration.service';
+export * from './configuration.service';

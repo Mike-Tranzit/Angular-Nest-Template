@@ -1,6 +1,8 @@
 import { NestFactory, FastifyAdapter } from "@nestjs/core";
 import { AppModule } from "./app.module";
-import * as path from "path";
+
+
+import * as path from 'path';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, new FastifyAdapter());
@@ -9,7 +11,6 @@ async function bootstrap() {
  /* app.useStaticAssets({
     root: path.resolve(__dirname + "../../../dist/public")
   });*/
-
-  await app.listen(3000);
+  await app.listen(AppModule.PORT);
 }
 bootstrap();
