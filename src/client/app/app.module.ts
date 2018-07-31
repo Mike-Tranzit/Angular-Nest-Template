@@ -12,6 +12,8 @@ import {states} from './shared/store/index'
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
+import {WebsocketModule} from './shared/websocket/index';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -23,9 +25,12 @@ import {AppRoutingModule} from './app-routing.module';
     HttpClientModule,
     NgxsModule.forRoot(states),
     ReactiveFormsModule,
-    NgxsLoggerPluginModule.forRoot(),
+   // NgxsLoggerPluginModule.forRoot(),
     NgxsReduxDevtoolsPluginModule.forRoot(),
-    BrowserModule
+    BrowserModule,
+    WebsocketModule.config({
+      url: environment.ws
+    })
   ],
   providers: [...services],
   bootstrap: [AppComponent]

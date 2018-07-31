@@ -1,6 +1,6 @@
 import { NestFactory, FastifyAdapter } from "@nestjs/core";
 import { AppModule } from "./app.module";
-
+import { WsAdapter } from '@nestjs/websockets/adapters';
 
 import * as path from 'path';
 
@@ -11,6 +11,7 @@ async function bootstrap() {
  /* app.useStaticAssets({
     root: path.resolve(__dirname + "../../../dist/public")
   });*/
+  app.useWebSocketAdapter(new WsAdapter());
   await app.listen(AppModule.PORT);
 }
 bootstrap();

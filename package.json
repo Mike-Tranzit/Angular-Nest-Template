@@ -35,7 +35,7 @@
     "@nestjs/microservices": "^5.0.0-beta.6",
     "@nestjs/testing": "^5.0.0",
     "@nestjs/typeorm": "^5.1.0",
-    "@nestjs/websockets": "^5.0.0-beta.6",
+    "@nestjs/websockets": "^5.1.0",
     "@ngxs/devtools-plugin": "^3.2.0",
     "@ngxs/logger-plugin": "^3.1.4-dev.master-b50211a",
     "@ngxs/store": "^3.2.0",
@@ -56,6 +56,7 @@
     "rxjs": "^6.0.0",
     "typeorm": "^0.2.7",
     "typescript": "2.7.2",
+    "ws": "^5.2.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
@@ -67,6 +68,7 @@
     "@types/jest": "^21.1.8",
     "@types/node": "^9.3.0",
     "@types/supertest": "^2.0.4",
+    "@types/websocket": "0.0.39",
     "codelyzer": "~4.2.1",
     "jest": "^21.2.1",
     "jest-preset-angular": "^5.2.2",

@@ -4,6 +4,7 @@ import {Connection} from 'typeorm';
 import {RouterModule, Routes} from 'nest-router';
 import {TypeOrmModule} from '@nestjs/typeorm';
 import {ConfigurationService} from './modules/common/services/index';
+import {WebsocketModule} from './modules/websocket/websocket.module';
 
 const routes: Routes = [{
     path: '/r',
@@ -16,7 +17,8 @@ const routes: Routes = [{
     imports: [
         RegistrationModule,
         RouterModule.forRoutes(routes),
-        TypeOrmModule.forRoot()
+        TypeOrmModule.forRoot(),
+        WebsocketModule
     ],
     controllers: [],
     providers: [
