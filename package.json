@@ -44,7 +44,7 @@
     "core-js": "^2.5.4",
     "crypto": "^1.0.1",
     "dotenv": "^6.0.0",
-    "fastify": "^1.4.0",
+    "fastify": "^2.15.1",
     "fastify-formbody": "^2.0.0",
     "fastify-static": "^0.11.0",
     "handlebars": "^4.0.11",
