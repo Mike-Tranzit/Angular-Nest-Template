@@ -56,7 +56,7 @@
     "rxjs": "^6.0.0",
     "typeorm": "^0.2.7",
     "typescript": "2.7.2",
-    "ws": "^5.2.2",
+    "ws": "^7.4.5",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
